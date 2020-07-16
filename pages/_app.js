@@ -1,13 +1,16 @@
 import React from 'react';
 import 'antd/dist/antd.css';
+import Head from 'next/head';
+import wrapper from '../store/configureStore';
+
 
 const App = ({Component}) =>{
     return(
         <>
-        <head>
+        <Head>
             <meta charSet="utf-u" />
             <title>JStargram</title>
-        </head>
+        </Head>
         <Component />
         </>
     )
@@ -15,4 +18,4 @@ const App = ({Component}) =>{
 
 
 
-export default App;
+export default wrapper.withRedux(App);
