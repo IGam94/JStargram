@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Popover,Button, Avatar } from 'antd';
+import { Card, Popover,Button, Avatar, List } from 'antd';
 import { RetweetOutlined,HeartOutlined,MessageOutlined } from '@ant-design/icons';
 import { useSelector } from 'react-redux';
 import PostImages from './PostImages';
@@ -36,7 +36,8 @@ const PostCard = ({post}) => {
           description={post.content}
         />
         </Card>
-
+        {commentFormOpened}
+        
     </div>
   )
 }
